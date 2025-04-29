@@ -1,7 +1,7 @@
 #include <iostream> // Imports functions for input and output like printing different strings
 
 int main() {
-    // 16:58 C++ Full course, 
+    // 29:51 C++ Full course, 
     // Introduction
         // This a comment
         /*
@@ -29,38 +29,77 @@ int main() {
         std::cout << y << std::endl;
         std::cout << sum << std::endl;
 
-    // Data types
+        // Data types
 
-        //integer (whole number)
-        int age = 21;
-        int year = 2023;
-        int day = 7.5;
+            //integer (whole number)
+            int age = 21;
+            int year = 2023;
+            int day = 7.5;
 
-        std::cout << day << std::endl; // It removes the 0.5
+            std::cout << day << std::endl; // It removes the 0.5
 
-        //double (number including decimal)
-        double price = 10.99;
-        double gpa = 2.5;
-        double temperature = 25.1;
+            //double (number including decimal)
+            double price = 10.99;
+            double gpa = 2.5;
+            double temperature = 25.1;
 
-        std::cout << price << std::endl;
+            std::cout << price << std::endl;
 
-        // single character
-        char grade = 'A';
-        char inital = 'B';
-        char currency = '$';
+            // single character
+            char grade = 'A';
+            char inital = 'B';
+            char currency = '$';
 
-        std::cout << inital << std::endl;
+            std::cout << inital << std::endl;
 
-        // boolean (true or false)
-        bool student = false;
-        bool power = true;
-        bool forSale = false;
+            // boolean (true or false)
+            bool student = false;
+            bool power = true;
+            bool forSale = false;
 
-        // string (objects that represents a sequence of text)
-        std::string name = "Logan";
+            // string (objects that represents a sequence of text)
+            std::string name = "Logan";
+            std::string days = "Friday";
+            std::string food = "pizza";
+            std::string address = "123 Fake St.";
 
-        std::cout << name << std::endl;
+            std::cout << name << std::endl;
+            // std::cout << "Hello" << name << std::endl; // NOTE: This doesn't includ a space and outputs HelloLogan
+            std::cout << "Hello " << name << std::endl;
+            std::cout << "You are " << age << " years old" << std::endl;
+    // Const keyword
+        // The const keyword specifies that a variable's value is constant
+        // tells the compiler to prevent anything from modifying it
+        // (read-only)
+        const double PI = 3.14159;
+        //pi = 420.69; // changing value will give error if uncommented
+        double radius = 10;
+        double circumference = 2 * PI * radius;
+
+        std::cout << circumference << "cm" << std::endl;
+        const int LIGHT_SPEED = 299792458;
+        const int WIDTH = 1920;
+        const int HEIGHT = 1080;
+    // Namespace keyword
+        // Namespace = provides a solution for preventing name conflicts
+        //             in large projects. Each entity needs a unique name.
+        //             A namespace allows for identically named entites
+        //             as long as the namespaces are different.
+
+        int x1 = 0;
+        //int x = 1; // throws error because x is already defined but at the top of the file you can write
+        /* for ex.
+            namespace first{
+                int x = 1;
+            }
+            namespace second{
+                int x = 2;
+            }
+            std::cout << x; // will display local entity in this case 0 
+            std::cout << first::x << std::endl; // uses first name space
+            std::cout << second::x << std::endl; // uses second namespace
+        */
+    
 
     return 0; // Ends the Main function
 }
