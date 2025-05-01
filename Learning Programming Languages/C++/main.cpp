@@ -1,5 +1,12 @@
 #include <iostream> // Imports functions for input and output like printing different strings
 
+namespace first{
+    int x2 = 1;
+}
+namespace second{
+    int x2 = 2;
+}
+
 int main() {
     // 29:51 C++ Full course, 
     // Introduction
@@ -85,21 +92,14 @@ int main() {
         //             in large projects. Each entity needs a unique name.
         //             A namespace allows for identically named entites
         //             as long as the namespaces are different.
-
-        int x1 = 0;
+        //using namespace first;    uncomment and remove declaration below and 1 will be displayed because when you use the keywords 'using namespace __INSERT_NAMESPACE_NAME' the default variable will go through that namespace first
+        int x2 = 0;
         //int x = 1; // throws error because x is already defined but at the top of the file you can write
-        /* for ex.
-            namespace first{
-                int x = 1;
-            }
-            namespace second{
-                int x = 2;
-            }
-            std::cout << x; // will display local entity in this case 0 
-            std::cout << first::x << std::endl; // uses first name space
-            std::cout << second::x << std::endl; // uses second namespace
-        */
-    
+        // NOTE LOOK AT THE TOP FOR AN EXAMPLE FOR NAMESPACE
+        std::cout << x2 << std::endl; // will display local entity in this case 0 
+        std::cout << first::x2 << std::endl; // uses first name space
+        std::cout << second::x2 << std::endl; // uses second namespace
+
 
     return 0; // Ends the Main function
 }
