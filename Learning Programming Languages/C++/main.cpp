@@ -1,4 +1,9 @@
 #include <iostream> // Imports functions for input and output like printing different strings
+//#include <vector> // for typedef
+
+//typedef std::vector<std::pair<std::string, int>> pairlist_t;
+typedef std::string text_t;
+typedef int number_t;
 
 namespace first{
     int x2 = 1;
@@ -8,7 +13,8 @@ namespace second{
 }
 
 int main() {
-    // 29:51 C++ Full course, 
+    // 33:45 C++ Full course, 
+    // using namespace std;
     // Introduction
         // This a comment
         /*
@@ -99,7 +105,19 @@ int main() {
         std::cout << x2 << std::endl; // will display local entity in this case 0 
         std::cout << first::x2 << std::endl; // uses first name space
         std::cout << second::x2 << std::endl; // uses second namespace
+        // Look at the top of the main() function to see the commented line 'using namespace std;', Then you can use a function like std::cout with just cout, But this is also not as great because std has hundreds of functions even one called data so to do the same thing you can just do 'using std::cout;'
+    // Typedef keyword
+        // typedef = reserved keyword used to create a additional name
+        //           (alias) for another data type.
+        //           New identifier for an existing type
+        //           Helps  with readability and reduces typos
 
+        // Look at the top commented lines ending with typedef for examples
+        // pairlist_t pairlist
+        text_t firstName = "Logan";
+        number_t age1 = 21;
+        std::cout << firstName << std::endl;
+        std::cout << age1 << std::endl;
 
     return 0; // Ends the Main function
 }
