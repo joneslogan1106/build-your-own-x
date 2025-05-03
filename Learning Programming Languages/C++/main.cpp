@@ -2,8 +2,10 @@
 //#include <vector> // for typedef
 
 //typedef std::vector<std::pair<std::string, int>> pairlist_t;
-typedef std::string text_t;
-typedef int number_t;
+/*typedef std::string text_t;
+typedef int number_t;*/
+using text_t = std::string;
+using number_t = int;
 
 namespace first{
     int x2 = 1;
@@ -13,7 +15,7 @@ namespace second{
 }
 
 int main() {
-    // 33:45 C++ Full course, 
+    // 39:07 C++ Full course, 
     // using namespace std;
     // Introduction
         // This a comment
@@ -110,7 +112,9 @@ int main() {
         // typedef = reserved keyword used to create a additional name
         //           (alias) for another data type.
         //           New identifier for an existing type
-        //           Helps  with readability and reduces typos
+        //           Helps with readability and reduces typos
+        //           Use when there is a clear beneift
+        //           Replaced with 'using' (work better w/ templates)
 
         // Look at the top commented lines ending with typedef for examples
         // pairlist_t pairlist
@@ -118,6 +122,22 @@ int main() {
         number_t age1 = 21;
         std::cout << firstName << std::endl;
         std::cout << age1 << std::endl;
+    // Arithmetic operations
+        // arithmetic operators = retrun the result of a spic
+        //                        arithmetic operation (+ - * /)
 
-    return 0; // Ends the Main function
+        int students = 20;
+        int students1 = 20;
+        int students2 = 20;
+        int students3 = 20;
+        int students4 = 20;        
+
+        // Addition
+        students = students + 1; // Adds another student
+        students+=1; // Does the exact same thing as the previous line
+        students++; // This is the incerment operator most commonly found in loops which will be covered later
+
+        std::cout << students << std::endl;
+
+    return 0; // Ends the Main function with no errors
 }
