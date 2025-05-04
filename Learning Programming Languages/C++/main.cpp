@@ -15,7 +15,7 @@ namespace second{
 }
 
 int main() {
-    // 39:07 C++ Full course, 
+    // 41:04 C++ Full course, 
     // using namespace std;
     // Introduction
         // This a comment
@@ -126,18 +126,43 @@ int main() {
         // arithmetic operators = retrun the result of a spic
         //                        arithmetic operation (+ - * /)
 
-        int students = 20;
+        int students = 20; // Can't hold decimals
         int students1 = 20;
         int students2 = 20;
-        int students3 = 20;
-        int students4 = 20;        
+        int students3 = 20;    
+        double students4 = 20;
+        int students5 = 20;
 
         // Addition
         students = students + 1; // Adds another student
         students+=1; // Does the exact same thing as the previous line
-        students++; // This is the incerment operator most commonly found in loops which will be covered later
+        students++; // This is the incerment operator which adds one to a variable, most commonly found in loops which will be covered later
+
+        // Subtraction
+        students1 = students1 - 1;
+        students1-=1;
+        students1--; // Does the oppsite thing of the increment operator, Mostly found in some loops and subtracts one
+
+        // Multiplication
+        students2 = students2 * 2;
+        students2*=2;
+
+        // Division
+        students3 = students3 / 2;
+        students3/=2;
+
+        students4/=3;
+
+        // Modulus(Remainder)
+        int remainder = students % 2;
+
+        int 
 
         std::cout << students << std::endl;
+        std::cout << students1 << std::endl;
+        std::cout << students2 << std::endl;
+        std::cout << students3 << std::endl;
+        std::cout << students4 << std::endl;
 
     return 0; // Ends the Main function with no errors
 }
